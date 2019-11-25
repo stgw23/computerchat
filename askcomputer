@@ -1,0 +1,39 @@
+import time
+import sys
+
+
+def delay_print(s):
+    for c in s:
+        if c:
+            sys.stdout.write(c)
+            sys.stdout.flush()
+            time.sleep(0.25)
+    return ''
+
+
+name = input("please enter your name...\n")
+print("\ncomputer says:")
+delay_print("hi, " + name + "\n")
+
+while True:
+    n = input("\nwhat would you like to ask the computer?\n")
+    if n == "what is your name?":
+        print("\ncomputer says:")
+        delay_print("the computer\n")
+        True
+    elif n == "how old are you?":
+        print("\ncomputer says:")
+        delay_print("99999\n")
+        True
+    elif n == "where am i?":
+        print("\ncomputer says:")
+        delay_print("in the computer\n")
+        True
+    elif n == "quit":
+        print("\ncomputer says:")
+        delay_print("goodbye\n")
+        exit()
+    else:
+        print("\ncomputer says:")
+        delay_print("i don't understand. sorry.\n")
+        True
